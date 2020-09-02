@@ -1,0 +1,47 @@
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+.carousel-inner .carousel-item-right.active,
+.carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+}
+
+.carousel-inner .carousel-item-left.active,
+.carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left {
+    transform: translateX(0);
+
+}
+
+.text-green {
+    color: #1E9E8F !important;
+}
+
+.text-purple {
+    color: #833F94 !important;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+    background-color: #833F94 !important;
+    color: #ffffff !important;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./Roboto.ttf');
+}
+
+body {
+    font-family: 'Roboto' !important;
+    color: #828282 !important;
+}
