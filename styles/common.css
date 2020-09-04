@@ -1,23 +1,28 @@
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
+.carousel-inner .carousel-item.active, .carousel-inner .carousel-item-next, .carousel-inner .carousel-item-prev {
     display: flex;
 }
 
-.carousel-inner .carousel-item-right.active,
-.carousel-inner .carousel-item-next {
-    transform: translateX(25%);
+@media (min-width: 768px) {
+    .carousel-inner .carousel-item-right.active, .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+    }
+    .carousel-inner .carousel-item-left.active, .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
+    .carousel-inner .carousel-item-right, .carousel-inner .carousel-item-left {
+        transform: translateX(0);
+    }
 }
-
-.carousel-inner .carousel-item-left.active,
-.carousel-inner .carousel-item-prev {
-    transform: translateX(-25%);
-}
-
-.carousel-inner .carousel-item-right,
-.carousel-inner .carousel-item-left {
-    transform: translateX(0);
-
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item-right.active, .carousel-inner .carousel-item-next {
+        transform: translateX(50%);
+    }
+    .carousel-inner .carousel-item-left.active, .carousel-inner .carousel-item-prev {
+        transform: translateX(-50%);
+    }
+    .carousel-inner .carousel-item-right, .carousel-inner .carousel-item-left {
+        transform: translateX(0);
+    }
 }
 
 .text-green {
@@ -28,12 +33,52 @@
     color: #833F94 !important;
 }
 
-.btn-primary,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:visited {
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
     background-color: #833F94 !important;
     color: #ffffff !important;
+}
+
+.btn-secondary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:visited {
+    background-color: #1E9E8F !important;
+    color: #ffffff !important;
+}
+
+.btn-outline-primary, .btn-outline-primary:hover, .btn-outline-primary:active, .btn-outline-primary:visited {
+    background-color: transparent !important;
+    border-color: #833F94 !important;
+    color: #833F94 !important;
+}
+
+.input-group-text {
+    border-right: 0 !important;
+    color: #1E9E8F !important;
+    background-color: transparent !important;
+}
+
+.img-profile {
+    height: 70px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.img-profile-navbar {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.profile-background {
+    background: linear-gradient(180deg, #1E9E8F 50%, transparent 50%);
+    width: 100%;
+}
+
+.bl-0 {
+    border-left: 0 !important;
+}
+
+.align-absolute-bottom {
+    position: absolute;
+    bottom: 0;
 }
 
 @font-face {

@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <!-- Meta -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/common.css">
+
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container container-index">
+        <div class="row content mx-4 my-5">
+            <div class="col-md-7 my-3">
+                <img src="assets/images/login-logo.svg" class="img-fluid" alt="Mulher em um computador">
+            </div>
+            <div class="col-md-5 d-flex align-items-center">
+                <!-- Username input-->
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <div class="input-group input-group-lg mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text shadow-sm" id="username-icon">
+                                    <span class="fa fa-lg fa-user"></span>
+                                </span>
+                            </div>
+                            <input type="text" id="username" class="form-control text-green shadow-sm bl-0 pl-0"
+                                placeholder="Usuário" aria-label="Usuário" aria-describedby="username-icon">
+                        </div>
+                    </div>
+                    <!-- Password input-->
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <div class="input-group input-group-lg mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text shadow-sm" id="password-icon">
+                                        <span class="fa fa-lg fa-lock"></span>
+                                    </span>
+                                </div>
+                                <input type="text" id="password" class="form-control text-green shadow-sm bl-0 pl-0"
+                                    placeholder="Senha" aria-label="Senha" aria-describedby="password-icon">
+                                <!-- Forgot password option -->
+                                <div class="col-md-12 p-0 mt-1 text-right">
+                                    <button type="button" class="btn text-green p-0" data-toggle="modal"
+                                    data-target="#modal-password"><u>Esqueci a senha</u></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Login button -->
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <a href="main-login.html" id="btn-login" class="nav-link btn btn-secondary btn-lg border-0 px-5">Entrar</a>
+                        </div>
+                    </div>
+                    <!-- Register option -->
+                    <div class="form-group">
+                        <div class="col-md-12 text-center">
+                            <a id="btn-register" class="text-green">Ainda não tem conta? Cadastre-se
+                                <span class="fa fa-lg fa-sign-in"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for forgot password -->
+        <div class="modal fade" id="modal-password" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-purple" id="event-title">Esqueci minha senha</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Dentro de alguns minutos você receberá um e-mail em sua caixa de entrada com a nova senha =)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
