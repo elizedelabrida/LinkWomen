@@ -20,20 +20,27 @@
         <a class="navbar-brand" href="#">
             <img src="assets/images/index-logo.svg" class="img-fluid" alt="LinkWomen">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main"
+            aria-controls="navbar-main" aria-expanded="false" aria-label="Abrir navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
-            <div>
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item mx-3">
+        <div class="collapse navbar-collapse" id="navbar-main">
+            <div class="d-flex justify-content-end w-100">
+                <ul class="navbar-nav">
+                    <li class="nav-item my-auto mr-5">
                         <a href="main-forum.html" class="nav-link text-green">Fórum</a>
                     </li>
-                    <li class="nav-item ml-5 mr-3">
-                        <div class="row">
-                            <img class="img-profile-navbar" src="assets/images/mulheresemdestaque.png" alt="Larissa Souza">
-                            <a class="nav-link text-purple">Meu perfil</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-purple" href="#" id="navbar-dropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="img-profile-navbar" src="assets/images/mulheresemdestaque.png"
+                                alt="Larissa Souza">
+                            Meu perfil
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbar-dropdown">
+                            <a class="dropdown-item" href="#">Meus dados</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Sair</a>
                         </div>
                     </li>
                 </ul>
@@ -42,18 +49,13 @@
     </nav>
 
     <section id="spotlight" class="row content m-5">
-        <div class="row content w-100 justify-content-center">
-            <div class="col-md-12 mt-2 p-0">
-                <h3 class="text-purple text-center">Mulheres em detaque</h3>
-            </div>
-            <a href="#carousel-spotlight" class="btn btn-lg p-0 ml-4 text-purple" role="button" data-slide="prev">
-                <span class="fa fa-arrow-left"></span>
-            </a>
-            <a href="#carousel-spotlight" class="btn btn-lg p-0 ml-4 text-purple" role="button" data-slide="next">
-                <span class="fa fa-arrow-right"></span>
-            </a>
-        </div>
+        <h3 class="text-purple text-center mx-auto">Mulheres em detaque</h3>
         <div class="row content align-content-center justify-content-center">
+            <a class="carousel-control-prev text-purple display-4 carousel-arrow" href="#carousel-spotlight" role="button"
+                data-slide="prev">
+                <span class="fa fa-chevron-left"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
             <div id="carousel-spotlight" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner p-3">
                     <div class="carousel-item active">
@@ -66,8 +68,7 @@
                             <h6 class="text-green  text-center px-2">CEO da LinkWomen</h5>
                                 <p class="px-2">
                                     Larissa (SP/24 anos) fundou a StartUp LinkWomen, conhecida pelas iniciativas
-                                    voltadas a reduzir a disparidade de gênero em TI. Ela também já foi desenvolvedora e
-                                    tem muitos pontinhos no StackOverflow =) Que tal se conectar com ela?
+                                    voltadas a reduzir a disparidade de gênero em TI.
                                 </p>
                                 <button id="btn-connect" type="button" class="btn btn-sm btn-outline-primary m-2">
                                     Conectar
@@ -84,8 +85,7 @@
                             <h6 class="text-green  text-center px-2">CEO da LinkWomen</h5>
                                 <p class="px-2">
                                     Larissa (SP/24 anos) fundou a StartUp LinkWomen, conhecida pelas iniciativas
-                                    voltadas a reduzir a disparidade de gênero em TI. Ela também já foi desenvolvedora e
-                                    tem muitos pontinhos no StackOverflow =) Que tal se conectar com ela?
+                                    voltadas a reduzir a disparidade de gênero em TI.
                                 </p>
                                 <button id="btn-connect" type="button" class="btn btn-sm btn-outline-primary m-2">
                                     Conectar
@@ -94,16 +94,19 @@
                     </div>
                 </div>
             </div>
+            <a class="carousel-control-next text-purple display-4 carousel-arrow" href="#carousel-spotlight" role="button"
+                data-slide="next">
+                <span class="fa fa-chevron-right fa-right mr-5"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
         </div>
     </section>
-
-
     <section id="events">
         <div class="container container-index bg-light d-flex">
             <div class="row content m-5">
                 <div class="row content">
                     <div class="col-md-12 mb-2 p-0">
-                        <h3 class="text-green">Iniciativas e eventos</h3>
+                        <h3 class="text-green">Iniciativas e Eventos</h3>
                     </div>
                 </div>
                 <div class="d-flex justify-content-end w-100">
@@ -118,10 +121,7 @@
                                 <div class="mr-5">
                                     <img class="img-fluid mb-2" src="assets/images/marialab.png" alt="MariaLab">
                                     <p>A MariaLab nasce do desejo de tornar os espaços de tecnologia mais plurais,
-                                        envolvendo mais mulheres, pessoas trans e não binárias,
-                                        e promovendo um pensamento e discussão interseccional que considere raça, classe
-                                        social, identidade de gênero no desenho de tecnologias, sejam elas digitais ou
-                                        não.
+                                        envolvendo mais mulheres, pessoas trans e não binárias.
                                     </p>
                                     <button type="button" class="btn text-green p-0" data-toggle="modal"
                                         data-target="#modal-event">
@@ -133,10 +133,7 @@
                                 <div class="mr-5">
                                     <img class="img-fluid mb-2" src="assets/images/marialab.png" alt="MariaLab">
                                     <p>A MariaLab nasce do desejo de tornar os espaços de tecnologia mais plurais,
-                                        envolvendo mais mulheres, pessoas trans e não binárias,
-                                        e promovendo um pensamento e discussão interseccional que considere raça, classe
-                                        social, identidade de gênero no desenho de tecnologias, sejam elas digitais ou
-                                        não.
+                                        envolvendo mais mulheres, pessoas trans e não binárias.
                                     </p>
                                     <button type="button" class="btn text-green p-0" data-toggle="modal"
                                         data-target="#modal-event">
@@ -191,5 +188,4 @@
     <script src="scripts/common.js"></script>
     <script src="scripts/main-login.js"></script>
 </body>
-
 </html>
