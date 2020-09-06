@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <!-- Meta -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <title>Discussão</title>
+</head>
+
+<body class="pt-5 container container-index">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top d-flex align-self-start">
+        <a class="navbar-brand" href="#">
+            <img src="assets/images/index-logo.svg" class="img-fluid" alt="LinkWomen">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main"
+            aria-controls="navbar-main" aria-expanded="false" aria-label="Abrir navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-main">
+            <div class="d-flex justify-content-end w-100">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-purple" href="#" id="navbar-dropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="img-profile-navbar" src="assets/images/mulheresemdestaque.png"
+                                alt="Larissa Souza">
+                            Meu perfil
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbar-dropdown">
+                            <a class="dropdown-item" href="#">Meus dados</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Sair</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="comments">
+        <div class="row content m-5">
+            <h3 class="text-purple text-center mx-auto mb-5">Troca de experiências em TI LGBTQ+</h3>
+            <div class="col-md-10">
+                <div class="comment">
+                    <div class="shadow row rounded p-3">
+                        <div class="col-md-2">
+                            <img class="img-profile mx-auto d-block py-2" src="assets/images/mulheresemdestaque.png"
+                                alt="Larissa Souza">
+                        </div>
+                        <div class="col-md-8">
+                            <p class="pt-2">
+                                "Local para troca de experiências voltadas ao grupo LGBTQ+. Como podemos melhorar
+                                nosso
+                                ambiente?
+                                Quais estereótipos propagamos sem perceber? Como tornar a área de TI um local ao
+                                qual
+                                pertencemos?"
+                            </p>
+                            <span class="text-purple">01/09/2020</span>
+                        </div>
+                        <div class="col-md-2 d-flex justify-content-end">
+                            <a href="#" role="button" id="btn-edit" class="fa fa-pencil text-green btn-lg"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="new-comment" class="mx-4">
+        <div class="well well-sm col-md-10">
+            <form class="form-horizontal" action="" method="post">
+                <fieldset>
+                    <div class="row content">
+                        <!-- Comment body -->
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label p-0 text-green" for="comment">Novo
+                                    comentário</label>
+                                <div class="col-md-12 p-0">
+                                    <textarea class="form-control" id="comment" name="comment"
+                                        placeholder="Escreva seu comentário" rows="5"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form actions -->
+                    <div class="form-group">
+                        <div class="col-md-12 p-0 text-right">
+                            <button type="button" id="btn-submit" class="btn btn-primary border-0 px-5">
+                                Enviar</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
