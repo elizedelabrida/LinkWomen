@@ -20,96 +20,102 @@
   <div class="container container-index">
     <div id="container-create-account" class="row content mx-4 my-5 align-items-center">
       <div class="col-md-5 d-flex align-items-center">
-        <!-- Email input-->
-        <div class="form-group">
-          <div class="col-md-12">
-            <p class="label-name text-green">Email</p>
-          </div>
-          <div class="col-md-12">
-            <div class="input-group input-group-lg mb-3">
-              <input type="text" id="email" class="form-control shadow-sm" placeholder="seuemail@gmail.com"
-                aria-label="Email" aria-describedby="email-icon" style="font-size: 16px;">
+        <form>
+          <!-- Email input-->
+          <div class="form-group">
+            <div class="col-md-12">
+              <p class="label-name text-green">Email</p>
             </div>
-          </div>
-
-          <!-- Name input-->
-          <div class="col-md-12">
-            <p class="label-name text-green">Nome completo</p>
-          </div>
-          <div class="col-md-12">
-            <div class="input-group input-group-lg mb-3">
-              <input type="text" id="full-name" class="form-control shadow-sm" placeholder="Nome sobrenome"
-                aria-label="Nome completo" aria-describedby="name-icon" style="font-size: 16px;">
-            </div>
-          </div>
-
-          <!-- CPF input-->
-          <div class="col-md-12">
-            <p class="label-name text-green">CPF</p>
-          </div>
-          <div class="col-md-12">
-            <div class="input-group input-group-lg mb-3">
-              <input type="text" id="CPF" class="form-control shadow-sm" placeholder="CPF" aria-label="CPF"
-                aria-describedby="cpf-icon" style="font-size: 16px;">
-            </div>
-          </div>
-
-          <!-- Username input-->
-          <div class="col-md-12">
-            <p class="label-name text-green">Nome de usuário</p>
-          </div>
-          <div class="col-md-12">
-            <div class="input-group input-group-lg mb-3">
-              <input type="text" id="username" class="form-control shadow-sm" placeholder="Nome de usuário"
-                aria-label="username" aria-describedby="username-icon" style="font-size: 16px;">
-            </div>
-          </div>
-
-          <!-- Password input-->
-          <div class="col-md-12">
-            <p class="label-name text-green">Senha</p>
-          </div>
-          <div class="col-md-12">
-            <div class="input-group input-group-lg mb-3">
-              <input type="password" id="password" class="form-control br-0 pr-0"
-                style="border-right: none; font-size: 16px; box-shadow: 0 .125rem .0 rgba(0,0,0,.075)!important;"
-                placeholder="Senha" aria-label="Senha" aria-describedby="password-icon">
-              <div class="input-group-append" style="cursor:pointer">
-                <span class="input-group-text shadow-sm" id="password-icon"
-                  style="border-right: 1px #ced4da solid !important">
-                  <span class="fa fa-eye-slash"></span>
-                </span>
+            <div class="col-md-12">
+              <div class="input-group input-group-lg mb-3">
+                <input type="text" id="email" name="email" class="form-control shadow-sm"
+                  placeholder="seuemail@gmail.com" aria-label="Email" aria-describedby="email-icon"
+                  style="font-size: 16px;">
               </div>
             </div>
-          </div>
 
-          <!-- Event notifications checkbox-->
-          <div class="col-md-12">
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="checkEventNotifications">
-              <label class="custom-control-label" for="checkEventNotifications" style="font-size: 16px;">Desejo receber
-                notificações de novos eventos por e-mail</label>
-            </div>
-          </div>
-
-          <!-- Agree with terms checkbox-->
-          <div class="col-md-12">
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="checkAgreeWithTerms">
-              <label class="custom-control-label" for="checkAgreeWithTerms" style="font-size: 16px;">Li e concordo
-                com os termos de uso</label>
-            </div>
-          </div>
-
-          <!-- Register button -->
-          <div class="form-group" style="margin-top: 10px">
+            <!-- Name input-->
             <div class="col-md-12">
-              <a href="login.html" id="btn-create-account"
-                class="nav-link btn btn-secondary btn-lg border-0 px-5">Cadastrar</a>
+              <p class="label-name text-green">Nome completo</p>
             </div>
-          </div>
+            <div class="col-md-12">
+              <div class="input-group input-group-lg mb-3">
+                <input type="text" id="full-name" name="name" class="form-control shadow-sm"
+                  placeholder="Nome sobrenome" aria-label="Nome completo" aria-describedby="name-icon"
+                  style="font-size: 16px;">
+              </div>
+            </div>
 
-        </div>
+            <!-- CPF input-->
+            <div class="col-md-12">
+              <p class="label-name text-green">CPF</p>
+            </div>
+            <div class="col-md-12">
+              <div class="input-group input-group-lg mb-3">
+                <input type="text" id="CPF" name="CPF" class="form-control shadow-sm" placeholder="CPF" aria-label="CPF"
+                  aria-describedby="cpf-icon" style="font-size: 16px;">
+              </div>
+            </div>
+
+            <!-- Username input-->
+            <div class="col-md-12">
+              <p class="label-name text-green">Nome de usuário</p>
+            </div>
+            <div class="col-md-12">
+              <div class="input-group input-group-lg mb-3">
+                <input type="text" id="username" name="username" class="form-control shadow-sm"
+                  placeholder="Nome de usuário" aria-label="username" aria-describedby="username-icon"
+                  style="font-size: 16px;">
+              </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="col-md-12">
+              <p class="label-name text-green">Senha</p>
+            </div>
+            <div class="col-md-12">
+              <div class="input-group input-group-lg mb-3">
+                <input type="password" id="password" name="password" class="form-control br-0 pr-0"
+                  style="border-right: none; font-size: 16px; box-shadow: 0 .125rem .0 rgba(0,0,0,.075)!important;"
+                  placeholder="Senha" aria-label="Senha" aria-describedby="password-icon">
+                <div class="input-group-append" style="cursor:pointer">
+                  <span class="input-group-text shadow-sm" id="password-icon"
+                    style="border-right: 1px #ced4da solid !important">
+                    <span class="fa fa-eye-slash"></span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Event notifications checkbox-->
+            <div class="col-md-12">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="checkEventNotifications">
+                <label class="custom-control-label" for="checkEventNotifications" style="font-size: 16px;">Desejo
+                  receber
+                  notificações de novos eventos por e-mail</label>
+              </div>
+            </div>
+
+            <!-- Agree with terms checkbox-->
+            <div class="col-md-12">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="checkAgreeWithTerms">
+                <label class="custom-control-label" for="checkAgreeWithTerms" style="font-size: 16px;">Li e concordo
+                  com os termos de uso</label>
+              </div>
+            </div>
+
+            <!-- Register button -->
+            <div class="form-group" style="margin-top: 10px">
+              <div class="col-md-12">
+                <a onclick="handleSubmitAccount()" id="btn-create-account"
+                  class="nav-link btn btn-secondary btn-lg border-0 px-5">Cadastrar</a>
+              </div>
+            </div>
+
+          </div>
+        </form>
       </div>
 
       <div class="col-md-7 my-3">
@@ -133,6 +139,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"></script>
+    <script src="scripts/create-account.js"></script>
 </body>
 
 </html>
