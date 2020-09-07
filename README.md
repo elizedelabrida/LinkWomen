@@ -11,7 +11,7 @@ Clique na imagem para assistir ao vídeo pitch!
 Neste repositório apresentamos as **funcionalidades implementadas**:
 
 * [`/assets`](assets): *front-end* recursos.
-* [`/scripts`](scripts):  arquivos javascript de definições gerais e integrações com a API(http://link-women.azurewebsites.net/)
+* [`/scripts`](scripts):  arquivos javascript de definições gerais e integrações com a [API LinkWomen](http://link-women.azurewebsites.net/)
 * [`/styles`](styles): *front-end* arquivos css.
 * [`root`](https://github.com/elizedelabrida/LinkWomen/): páginas em html da solução.
 
@@ -27,3 +27,6 @@ Neste repositório apresentamos as **funcionalidades implementadas**:
 * [FontAwesome](https://fontawesome.com/)
 * [jQuery](https://jquery.com/)
 
+## URL
+
+* https://linkwomen.herokuapp.com/index.html
