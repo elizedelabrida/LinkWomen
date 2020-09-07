@@ -1,44 +1,45 @@
 const token = localStorage.getItem("linkwomen:token");
-const issueId = localStorage.getItem("linkwomen:discussionId"); 
+const issueId = localStorage.getItem("linkwomen:discussionId");
 
-$(document).ready(function(){
-    getIssue(issueId); 
-}); 
+$(document).ready(function () {
+  getIssue(issueId);
+});
 
-function getIssue(id){
-    $.ajax({
-        url: `https://link-women.azurewebsites.net/api/ForumIssue/${id}`,
-        contentType: "application/json",
-        headers: { Authorization: "Bearer " + token },
-        method: "GET",
-        success: (response) => {
+function getIssue(id) {
+  $.ajax({
+    url: `https://link-women.azurewebsites.net/api/ForumIssue/${id}`,
+    contentType: "application/json",
+    headers: { Authorization: "Bearer " + token },
+    method: "GET",
+    success: (response) => {
 
-            $("#issue-title").html(response.title); 
-            $("#comment-items").append(createHtmlComment(response)); 
+      $("#issue-title").html(response.title);
+      $("#comment-items").append(createHtmlComment(response));
 
-            response.comments.forEach(element => {
-                $("#comment-items").append(createHtmlComment(element)); 
-            });
-          console.log(response); 
-        },
-        error: (response) => {
-          if (response.status === 400) {
-            alert(response.responseText);
-          } else {
-            alert("Erro inesperado, por favor tente novamente mais tarde.");
-          }
-        },
+      response.comments.forEach(element => {
+        $("#comment-items").append(createHtmlComment(element));
       });
+      console.log(response);
+    },
+    error: (response) => {
+      if (response.status === 400) {
+        alert(response.responseText);
+      } else {
+        alert("Erro inesperado, por favor tente novamente mais tarde.");
+      }
+    },
+  });
 
 }
 
-function createHtmlComment(comment){
-    let html = `
+function createHtmlComment(comment) {
+  let html = `
     <div class="comment">
         <div class="shadow row rounded p-3">
-            <div class="col-md-2">
-                <img class="img-profile mx-auto d-block py-2" src="assets/images/mulheresemdestaque.png"
-                    alt="Larissa Souza">
+            <div class="col-md-2 text-center">
+                <img class="img-profile mx-auto d-block py-2" src="assets/images/imagem-perfil.png"
+                    alt="Foto do perfil">
+                    ${comment.user}
             </div>
             <div class="col-md-8">
                 <p class="pt-2">
@@ -50,30 +51,30 @@ function createHtmlComment(comment){
                 <a href="#" role="button" id="btn-edit" class="fa fa-pencil text-green btn-lg"></a>
             </div>
         </div>
-    </div>`; 
+    </div>`;
 
-    return html;    
+  return html;
 }
 
-function handleSubmitComment(){
-    let comment = $("#comment").val(); 
+function handleSubmitComment() {
+  let comment = $("#comment").val();
 
-    $.ajax({
-        url: `https://link-women.azurewebsites.net/api/ForumIssue/${issueId}/Comment`,
-        contentType: "application/json",
-        data: JSON.stringify(comment), 
-        headers: { Authorization: "Bearer " + token },
-        method: "POST",
-        success: (response) => {
-            $("#comment-items").append(createHtmlComment(response)); 
-            $("#comment").val(""); 
-        },
-        error: (response) => {
-          if (response.status === 400) {
-            alert(response.responseText);
-          } else {
-            alert("Erro inesperado, por favor tente novamente mais tarde.");
-          }
-        },
-      });
+  $.ajax({
+    url: `https://link-women.azurewebsites.net/api/ForumIssue/${issueId}/Comment`,
+    contentType: "application/json",
+    data: JSON.stringify(comment),
+    headers: { Authorization: "Bearer " + token },
+    method: "POST",
+    success: (response) => {
+      $("#comment-items").append(createHtmlComment(response));
+      $("#comment").val("");
+    },
+    error: (response) => {
+      if (response.status === 400) {
+        alert(response.responseText);
+      } else {
+        alert("Erro inesperado, por favor tente novamente mais tarde.");
+      }
+    },
+  });
 }

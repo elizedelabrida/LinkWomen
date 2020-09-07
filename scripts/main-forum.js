@@ -32,14 +32,15 @@ function createHtmlIssueItem(issue) {
     <a onclick="selectItem(${issue.id})" class="discussion">
         <div class="row justify-content-end mt-3">
             <div class="category-discussion col-md-2 text-center p-1 mx-4 font-size-small rounded shadow">
-                <span class="fa fa-circle pt-1 mr-1 text-warning"></span>
-                LGBTQ+
+            <span class="fa fa-circle pt-1 mr-1 text-success"></span>
+            Geral
             </div>
         </div>
         <div class="shadow row rounded p-3">
-            <div class="col-md-2">
-                <img class="img-profile mx-auto d-block py-2" src="assets/images/mulheresemdestaque.png"
-                    alt="Larissa Souza">
+            <div class="col-md-2 text-center text-purple">
+                <img class="img-profile mx-auto d-block py-2" src="assets/images/imagem-perfil.png"
+                    alt="Foto do perfil">
+                    ${issue.user}
             </div>
             <div class="col-md-8">
                 <h5 class="text-purple">${issue.title}</h3>

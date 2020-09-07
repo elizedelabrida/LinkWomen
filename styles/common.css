@@ -77,7 +77,6 @@
     color: #1E9E8F !important;
 }
 
-
 .input-group-text {
     border-right: 0 !important;
     color: #1E9E8F !important;
@@ -113,7 +112,7 @@
     border-bottom-right-radius: 0 !important;
 }
 
-.name-carousel{
+.name-carousel {
     margin-top: 40px;
 }
 
@@ -190,11 +189,11 @@ input::-ms-input-placeholder, select::-ms-input-placeholder {
 .grid-profile .profile-background, .sponsorship-grid .profile-background {
     align-items: center;
     justify-content: space-between;
-    padding: 0 15px;   
+    padding: 0 15px;
     height: 50px;
 }
 
-.grid-profile .img-profile, .sponsorship .img-profile{
+.grid-profile .img-profile, .sponsorship .img-profile {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -202,7 +201,7 @@ input::-ms-input-placeholder, select::-ms-input-placeholder {
     top: -30px;
 }
 
-.sponsorship-grid{
+.sponsorship-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 50px;
@@ -212,14 +211,14 @@ input::-ms-input-placeholder, select::-ms-input-placeholder {
     max-width: 250px;
 }
 
-.grid-profile .connections .img-profile{
+.grid-profile .connections .img-profile {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: 8px;
 }
 
-.grid-profile .tech-skills .img-tech{
+.grid-profile .tech-skills .img-tech {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -234,7 +233,7 @@ input::-ms-input-placeholder, select::-ms-input-placeholder {
     width: 50vw !important;
 }
 
-.more-connections{
+.more-connections {
     border-radius: 50%;
     background: #adadad;
     color: #fff;
