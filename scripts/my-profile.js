@@ -4,7 +4,7 @@ var token;
 
 $(document).ready(function () {
   $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
+    $('[data-toggle="tooltip"]').tooltip();
   });
   userId = localStorage.getItem("linkwomen:userId");
   token = localStorage.getItem("linkwomen:token");
@@ -21,15 +21,21 @@ $(document).ready(function () {
         Occupation: response.occupation,
         Bio: response.bio,
         UserName: response.userName,
-        GitHub: response.gitHub
+        GitHub: response.gitHub,
+        PhotoUrl: response.photoUrl,
       };
 
-      $('#name').html(user.Name);
-      $('#email').val(user.Email);
-      $('#full-name').val(user.Name);
-      $('#occupation').val(user.Occupation);
-      $('#github').val(user.GitHub);
-      $('#bio').val(user.Bio);
+      $("#name").html(user.Name);
+      $("#email").val(user.Email);
+      $("#full-name").val(user.Name);
+      $("#occupation").val(user.Occupation);
+      $("#github").val(user.GitHub);
+      $("#bio-profile h5").html(user.Bio);
+
+      if (user.PhotoUrl) {
+        $("#avatar").attr("src", user.PhotoUrl);
+        $("#avatar").attr("alt", user.Name);
+      }
     },
     error: (response) => {
       if (response.status === 400) {
@@ -42,10 +48,13 @@ $(document).ready(function () {
 });
 
 function editBio() {
-  $('#bio-profile').html('');
-  $('#bio-profile').html(`
+  $("#bio-profile").html("");
+  $("#bio-profile").html("");
+  $("#bio-profile").html(`
     <textarea id="bio" class="form-control" rows="3" style="resize:none"
-      placeholder="Digite uma pequena biografia sobre você">${user.Bio ? user.Bio : ''}</textarea>
+      placeholder="Digite uma pequena biografia sobre você">${
+        user.Bio ? user.Bio : ""
+      }</textarea>
     <div style="text-align: end;">
     <button type="button" class="btn btn-sm btn-outline-primary mt-2 mr-1" onclick="cancelBio()">
       Cancelar
@@ -55,24 +64,26 @@ function editBio() {
     </button>
     </div>
     `);
-  $('#edit-bio-icon').addClass('d-none');
+  $("#edit-bio-icon").addClass("d-none");
 }
 
 function cancelBio() {
-  $('#edit-bio-icon').removeClass('d-none');
-  $('#bio-profile').html('');
-  $('#bio-profile').html(`<h5 class="text-green text-center px-2">Nos conte um pouco sobre você :)</h5>`);
-  $('#bio').val(user.Bio);
-};
+  $("#edit-bio-icon").removeClass("d-none");
+  $("#bio-profile").html("");
+  $("#bio-profile").html(
+    `<h5 class="text-green text-center px-2">Nos conte um pouco sobre você :)</h5>`
+  );
+  $("#bio").val(user.Bio);
+}
 
 function saveBio() {
-  user.Bio = $('#bio').val();
+  user.Bio = $("#bio").val();
 
   $.ajax({
     url: `https://link-women.azurewebsites.net/api/User/${userId}/UpdateBio`,
     contentType: "application/json",
     headers: { Authorization: "Bearer " + token },
-    data: user.Bio,
+    data: JSON.stringify(user.Bio),
     method: "PUT",
     success: (response) => {
       location.href;
@@ -88,10 +99,10 @@ function saveBio() {
 }
 
 function saveUser() {
-  user.Email = $('#email').val();
-  user.Name = $('#full-name').val();
-  user.Occupation = $('#occupation').val();
-  user.GitHub = $('#github').val();
+  user.Email = $("#email").val();
+  user.Name = $("#full-name").val();
+  user.Occupation = $("#occupation").val();
+  user.GitHub = $("#github").val();
 
   $.ajax({
     url: `https://link-women.azurewebsites.net/api/User/${userId}`,
