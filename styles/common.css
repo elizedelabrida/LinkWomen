@@ -56,11 +56,13 @@
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
     background-color: #833F94 !important;
     color: #ffffff !important;
+    border-color: #833F94 !important;
 }
 
 .btn-secondary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:visited {
     background-color: #1E9E8F !important;
     color: #ffffff !important;
+    border-color: #1E9E8F !important;
 }
 
 .btn-outline-primary, .btn-outline-primary:hover, .btn-outline-primary:active, .btn-outline-primary:visited {
@@ -68,6 +70,13 @@
     border-color: #833F94 !important;
     color: #833F94 !important;
 }
+
+.btn-outline-secondary, .btn-outline-secondary:hover, .btn-outline-secondary:active, .btn-outline-secondary:visited {
+    background-color: transparent !important;
+    border-color: #1E9E8F !important;
+    color: #1E9E8F !important;
+}
+
 
 .input-group-text {
     border-right: 0 !important;
@@ -99,7 +108,6 @@
 .profile-background {
     background: #1E9E8F;
     width: 100%;
-    height: 50px;
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
 }
@@ -121,6 +129,7 @@
 body {
     font-family: 'Roboto' !important;
     color: #828282 !important;
+    font-size: 0.95rem !important;
 }
 
 .label-name{
@@ -169,19 +178,43 @@ input::-ms-input-placeholder, select::-ms-input-placeholder { /* Microsoft Edge 
     column-gap: 50px;
 }
 
-.grid-profile .profile-background {
+.grid-profile .profile-background, .sponsorship-grid .profile-background {
     align-items: center;
     justify-content: space-between;
-    padding: 0 15px;
+    padding: 0 15px;   
+    height: 50px;
 }
 
-.grid-profile .img-profile{
+.grid-profile .img-profile, .sponsorship .img-profile{
     width: 100px;
     height: 100px;
     border-radius: 50%;
     position: relative;
     top: -30px;
-    font-size: 0.95rem !important;
+}
+
+.sponsorship-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+}
+
+.grid-profile .connections {
+    max-width: 250px;
+}
+
+.grid-profile .connections .img-profile{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.grid-profile .tech-skills .img-tech{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
 .font-size-small {
@@ -190,4 +223,12 @@ input::-ms-input-placeholder, select::-ms-input-placeholder { /* Microsoft Edge 
 
 .vw-50 {
     width: 50vw !important;
+}
+
+.more-connections{
+    border-radius: 50%;
+    background: #adadad;
+    color: #fff;
+    width: 50px;
+    height: 50px;
 }
