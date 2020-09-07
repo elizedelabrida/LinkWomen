@@ -30,10 +30,10 @@
     .carousel-inner .carousel-item-right, .carousel-inner .carousel-item-left {
         transform: translateX(0);
     }
-    #container-create-account{
+    #container-create-account {
         flex-direction: column-reverse;
     }
-    #title-create-account, #logo-create-account{
+    #title-create-account, #logo-create-account {
         margin-left: 10px !important;
     }
     .carousel-arrow {
@@ -108,8 +108,13 @@
 .profile-background {
     background: #1E9E8F;
     width: 100%;
+    height: 10%;
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
+}
+
+.name-carousel{
+    margin-top: 40px;
 }
 
 .bl-0 {
@@ -132,7 +137,7 @@ body {
     font-size: 0.95rem !important;
 }
 
-.label-name{
+.label-name {
     font-size: 18px;
     margin-bottom: 0;
 }
@@ -143,24 +148,28 @@ body {
     background-color: #58C9B4 !important;
 }
 
-input::placeholder, option[value="0"] { /* Chrome, Firefox, Opera, Safari 10.1+ */
+input::placeholder, option[value="0"] {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #ADADAD !important;
-    opacity: 1; /* Firefox */
+    opacity: 1;
+    /* Firefox */
 }
-  
-input::-ms-input-placeholder, select::-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #ADADAD !important;
-}
-  
-input::-ms-input-placeholder, select::-ms-input-placeholder { /* Microsoft Edge */
+
+input::-ms-input-placeholder, select::-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
     color: #ADADAD !important;
 }
 
-.border-radius{
+input::-ms-input-placeholder, select::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #ADADAD !important;
+}
+
+.border-radius {
     border-radius: 8px;
 }
 
-.icon-edit{
+.icon-edit {
     font-size: 20px;
     color: #fff;
     text-align: end;
@@ -169,7 +178,7 @@ input::-ms-input-placeholder, select::-ms-input-placeholder { /* Microsoft Edge 
     position: relative;
 }
 
-.grid-profile{
+.grid-profile {
     display: grid !important;
     grid-template-columns: 250px 1fr;
     width: 100%;

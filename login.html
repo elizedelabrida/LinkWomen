@@ -23,6 +23,7 @@
                 <img src="assets/images/login-logo.svg" class="img-fluid" alt="Mulher em um computador">
             </div>
             <div class="col-md-5 d-flex align-items-center">
+                <form>
                 <!-- Username input-->
                 <div class="form-group">
                     <div class="col-md-12">
@@ -32,8 +33,8 @@
                                     <span class="fa fa-lg fa-user"></span>
                                 </span>
                             </div>
-                            <input type="text" id="username" class="form-control text-green shadow-sm bl-0 pl-0"
-                                placeholder="Usuário" aria-label="Usuário" aria-describedby="username-icon">
+                            <input type="text" id="username" name="username" class="form-control text-green bl-0 pl-0"
+                                placeholder="Usuário" aria-label="Usuário" aria-describedby="username-icon" autocomplete="off" maxlength="100">
                         </div>
                     </div>
                     <!-- Password input-->
@@ -45,8 +46,8 @@
                                         <span class="fa fa-lg fa-lock"></span>
                                     </span>
                                 </div>
-                                <input type="text" id="password" class="form-control text-green shadow-sm bl-0 pl-0"
-                                    placeholder="Senha" aria-label="Senha" aria-describedby="password-icon">
+                                <input type="password" id="password" name="password" class="form-control text-green bl-0 pl-0"
+                                    placeholder="Senha" aria-label="Senha" aria-describedby="password-icon" autocomplete="off" maxlength="100">
                                 <!-- Forgot password option -->
                                 <div class="col-md-12 p-0 mt-1 text-right">
                                     <button type="button" class="btn text-green p-0" data-toggle="modal"
@@ -58,7 +59,7 @@
                     <!-- Login button -->
                     <div class="form-group">
                         <div class="col-md-12">
-                            <a href="main-login.html" id="btn-login"
+                            <a onclick="handleLogin()" id="btn-login"
                                 class="nav-link btn btn-secondary btn-lg border-0 px-5">Entrar</a>
                         </div>
                     </div>
@@ -72,6 +73,7 @@
                         </div>
                     </div>
                 </div>
+                </form>
             </div>
         </div>
 
@@ -97,6 +99,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
             integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
             crossorigin="anonymous"></script>
+        <script src="scripts/login.js"></script>
 </body>
 
 </html>

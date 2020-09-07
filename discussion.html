@@ -46,30 +46,8 @@
     </nav>
     <section id="comments">
         <div class="row content m-5">
-            <h3 class="text-purple text-center mx-auto mb-5">Troca de experiências em TI LGBTQ+</h3>
-            <div class="col-md-10">
-                <div class="comment">
-                    <div class="shadow row rounded p-3">
-                        <div class="col-md-2">
-                            <img class="img-profile mx-auto d-block py-2" src="assets/images/mulheresemdestaque.png"
-                                alt="Larissa Souza">
-                        </div>
-                        <div class="col-md-8">
-                            <p class="pt-2">
-                                "Local para troca de experiências voltadas ao grupo LGBTQ+. Como podemos melhorar
-                                nosso
-                                ambiente?
-                                Quais estereótipos propagamos sem perceber? Como tornar a área de TI um local ao
-                                qual
-                                pertencemos?"
-                            </p>
-                            <span class="text-purple">01/09/2020</span>
-                        </div>
-                        <div class="col-md-2 d-flex justify-content-end">
-                            <a href="#" role="button" id="btn-edit" class="fa fa-pencil text-green btn-lg"></a>
-                        </div>
-                    </div>
-                </div>
+            <h3 id="issue-title" class="text-purple text-center mx-auto mb-5"></h3>
+            <div id="comment-items" class="col-md-10">
             </div>
         </div>
     </section>
@@ -95,7 +73,7 @@
                     <!-- Form actions -->
                     <div class="form-group">
                         <div class="col-md-12 p-0 text-right">
-                            <button type="button" id="btn-submit" class="btn btn-primary border-0 px-5">
+                            <button type="button" id="btn-submit" class="btn btn-primary border-0 px-5" onclick="handleSubmitComment()">
                                 Enviar</button>
                         </div>
                     </div>
@@ -109,6 +87,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+    <script src="scripts/discussion.js"></script>
 </body>
 
 </html>
