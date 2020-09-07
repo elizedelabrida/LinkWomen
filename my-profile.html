@@ -30,12 +30,18 @@
           <li class="nav-item mx-3">
             <a href="main-forum.html" class="nav-link text-green">Fórum</a>
           </li>
-          <li class="nav-item ml-5 mr-3">
-            <div class="row" style="min-width: 150px;">
-              <img class="img-profile-navbar" src="assets/images/imagem-perfil.png" alt="Foto do perfil">
-              <a href="my-profile.html" class="nav-link text-purple">Meu perfil</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-purple" href="my-profile.html" id="navbar-dropdown"
+                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="img-profile-navbar" src="assets/images/imagem-perfil.png" alt="Foto do perfil">
+                Meu perfil
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbar-dropdown">
+                <a class="dropdown-item" href="my-profile.html">Meus dados</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" onclick="handleLogout()">Sair</a>
             </div>
-          </li>
+        </li>
         </ul>
       </div>
     </div>
@@ -227,6 +233,7 @@
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
   <script src="scripts/my-profile.js"></script>
+  <script src="scripts/common.js"></script>
 </body>
 
 </html>
