@@ -29,7 +29,7 @@ function listItems() {
 
 function createHtmlIssueItem(issue) {
   let html = `
-    <a href="discussion.html" class="discussion">
+    <a onclick="selectItem(${issue.id})" class="discussion">
         <div class="row justify-content-end mt-3">
             <div class="category-discussion col-md-2 text-center p-1 mx-4 font-size-small rounded shadow">
                 <span class="fa fa-circle pt-1 mr-1 text-warning"></span>
@@ -95,4 +95,11 @@ function handleSubmitIssue() {
       }
     },
   });
+}
+
+
+function selectItem(itemId){
+
+  localStorage.setItem("linkwomen:discussionId", itemId); 
+  location.href = "discussion.html"; 
 }
