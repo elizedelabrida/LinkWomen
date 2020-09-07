@@ -13,7 +13,7 @@ function handleSubmitAccount() {
   }
 
   $.ajax({
-    url: "http://link-women.azurewebsites.net/api/User",
+    url: "https://link-women.azurewebsites.net/api/User",
     contentType: "application/json",
     data: JSON.stringify(data),
     method: "POST",

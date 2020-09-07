@@ -13,7 +13,7 @@ function handleLogin() {
   }
 
   $.ajax({
-    url: "http://link-women.azurewebsites.net/api/Session",
+    url: "https://link-women.azurewebsites.net/api/Session",
     contentType: "application/json",
     data: JSON.stringify(data),
     method: "POST",

@@ -8,7 +8,7 @@ function listItems() {
   
 
   $.ajax({
-    url: "http://link-women.azurewebsites.net/api/ForumIssue/All",
+    url: "https://link-women.azurewebsites.net/api/ForumIssue/All",
     method: "GET",
     headers: { Authorization: "Bearer " + token },
     success: (response) => {
@@ -76,7 +76,7 @@ function handleSubmitIssue() {
   }
 
   $.ajax({
-    url: "http://link-women.azurewebsites.net/api/ForumIssue",
+    url: "https://link-women.azurewebsites.net/api/ForumIssue",
     contentType: "application/json",
     data: JSON.stringify(data),
     headers: { Authorization: "Bearer " + token },
