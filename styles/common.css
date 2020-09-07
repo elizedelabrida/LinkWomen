@@ -3,6 +3,9 @@
 }
 
 @media (min-width: 768px) {
+    .item-spotlight {
+        width: 15vw !important;
+    }
     .carousel-inner .carousel-item-right.active, .carousel-inner .carousel-item-next {
         transform: translateX(25%);
     }
@@ -15,6 +18,10 @@
 }
 
 @media (max-width: 768px) {
+    .item-spotlight {
+        width: 25vw !important;
+    }
+
     body {
         font-size: 0.7rem !important;
     }
