@@ -15,7 +15,6 @@ function handleLogin() {
   $.ajax({
     url: "http://link-women.azurewebsites.net/api/Session",
     contentType: "application/json",
-    crossOrigin: null,
     data: JSON.stringify(data),
     method: "POST",
     success: (response) => {
